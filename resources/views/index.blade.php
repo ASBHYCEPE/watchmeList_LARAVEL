@@ -24,8 +24,8 @@
                 </div>
             </div>
             <div id="nav">
-                <a href="#">HOME</a>
-                <a href="watchlisthistory.php">WATCHLIST HISTORY</a>
+                <a href="/">HOME</a>
+                <a href="/history">WATCHLIST HISTORY</a>
             </div>
         </div>
     </header>
