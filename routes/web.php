@@ -15,3 +15,4 @@ use App\Http\Controllers\navigationController;
 */
 
 Route::get('/', [navigationController::class, 'index']);
+Route::get('/history', [navigationController::class, 'history']);

@@ -9,4 +9,8 @@ class navigationController extends Controller
     public function index(){
         return view('index');
     }
+
+    public function history(){
+        return view('history');
+    }
 }
