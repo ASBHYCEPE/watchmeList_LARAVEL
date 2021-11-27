@@ -21,7 +21,7 @@ class navigationController extends Controller
         $droppedShows = DB::select('SELECT show_title FROM watchlists WHERE show_category = 3');
         $finishedShows = DB::select('SELECT show_title FROM watchlists WHERE show_category = 2');
 
-        return view('history', ['dropedShows' => $droppedShows,
+        return view('history', ['droppedShows' => $droppedShows,
                                 'finishedShows' => $finishedShows]);
     }
 }
