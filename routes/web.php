@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\navigationController;
+use App\Http\Controllers\WatchlistController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,4 @@ use App\Http\Controllers\navigationController;
 
 Route::get('/', [navigationController::class, 'index']);
 Route::get('/history', [navigationController::class, 'history']);
+Route::post('/post',[WatchlistController::class, 'store']);
