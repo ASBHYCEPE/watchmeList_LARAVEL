@@ -34,7 +34,9 @@
                 <h1>YOUR PAST SHOWS</h1>
             </div>
             <div class="block-item">
-                <a href="/delete">CLEAR ALL SHOWS</a>
+                <form action="/delete" method="POST">
+                    <input id="clearBtn" type="submit" value="CLEAR HISTORY">
+                </form>
             </div>
         </div>
         <div id="category-container">

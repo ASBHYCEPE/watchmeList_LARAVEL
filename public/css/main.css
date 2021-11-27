@@ -63,17 +63,17 @@ header{
     padding-left: 10px;
 }
 
-#block .block-item a{
+#clearBtn{
     outline: none;
     padding: 10px;
-    color: white;
     margin-left: 15px;
     border-radius: 5px;
     text-decoration: none;
     background-color: #27ae60;
 }
 
-#block .block-item a:hover{
+#clearBtn:hover{
+    cursor: pointer;
     background-color: #27ae71;
 }
 
