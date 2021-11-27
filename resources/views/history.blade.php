@@ -42,11 +42,25 @@
                 <div class="category-title">
                     <h2>DROPPED SHOWS</h2>
                 </div>
+                @foreach ($droppedShows as $key => $data)
+                    <div class="category-item">
+                        <div class="col-4">
+                            <h4>{{$data->show_title}}</h4>
+                        </div>
+                    </div>
+                @endforeach
             </div>
             <div class="category-block">
                 <div class="category-title">
                     <h2>FINISHED WATCHING</h2>
                 </div>
+                @foreach ($finishedShows as $key => $data)
+                    <div class="category-item">
+                        <div class="col-4">
+                            <h4>{{$data->show_title}}</h4>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
