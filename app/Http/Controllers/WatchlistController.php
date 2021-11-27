@@ -36,7 +36,18 @@ class WatchlistController extends Controller
      */
     public function store(StorewatchlistRequest $request)
     {
-        //
+        
+    }
+
+    private function idGenerator(){
+        $num = array("1", "2", "3", "4", "5", "6", "7", "8","9");
+        $generatedID = "";
+
+        for($i = 0; $i<4; $i++){
+            $generatedID .= $num[rand(0, 8)];
+        }
+
+        return $generatedID;
     }
 
     /**
