@@ -95,19 +95,22 @@ input[type="text"]:focus{
     padding: 11px;
 }
 
-
 input[type="submit"]{
     width: 100%;
     padding: 12px;
+    border-radius: 10px;
     outline: none;
     border: none;
-    border-radius: 5px;
-    background-color: #27ae60;
-    font-weight: bolder;
     color: white;
+    font-weight: bolder;
 }
 
-input[type="submit"]:hover{
+.submitBtn{
+   
+    background-color: #27ae60;
+}
+
+.submitBtn{
     cursor: pointer;
     background-color: #2ecc71;
 }
@@ -161,12 +164,6 @@ select{
     margin-top: 10px;
 }
 
-#category-container .category-item a{
-    color: white;
-    font-size: 15px;
-    text-decoration: none;
-    padding: 10px;
-}
 
 #category-container .category-item h4{
     text-align: center;
@@ -175,27 +172,28 @@ select{
 
 #category-container .category-item div{
     margin-left: 5px;
-    padding: 10px;
-    border-radius: 10px;
+    
 }
 
 #category-container .category-item > div:nth-child(1){
     background-color: #2c3e50;
+    border-radius: 10px;
+    padding: 10px;
 }
 
-#category-container .category-item > div:nth-child(2){
+.dropBtn{
     background-color: tomato;
 }
 
-#category-container .category-item > div:nth-child(2):hover{
+.dropBtn:hover{
     background-color: red;
 }
 
-#category-container .category-item > div:nth-child(3){
+.updateBtn{
     background-color: #27ae60;
 }
 
-#category-container .category-item > div:nth-child(3):hover{
+.updateBtn:hover{
     background-color: green;
 }
 
