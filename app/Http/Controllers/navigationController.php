@@ -18,8 +18,8 @@ class navigationController extends Controller
 
     public function history(){
 
-        $droppedShows = DB::select('SELECT * FROM watchlists WHERE show_category = 3');
-        $finishedShows = DB::select('SELECT * FROM watchlists WHERE show_category = 2');
+        $droppedShows = DB::select('SELECT show_title FROM watchlists WHERE show_category = 3');
+        $finishedShows = DB::select('SELECT show_title FROM watchlists WHERE show_category = 2');
 
         return view('history', ['dropedShows' => $droppedShows,
                                 'finishedShows' => $finishedShows]);
