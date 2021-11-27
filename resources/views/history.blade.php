@@ -34,7 +34,7 @@
                 <h1>YOUR PAST SHOWS</h1>
             </div>
             <div class="block-item">
-                <a href="">CLEAR ALL SHOWS</a>
+                <a href="/delete">CLEAR ALL SHOWS</a>
             </div>
         </div>
         <div id="category-container">
