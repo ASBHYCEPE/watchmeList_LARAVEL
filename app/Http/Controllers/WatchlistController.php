@@ -36,7 +36,16 @@ class WatchlistController extends Controller
      */
     public function store(StorewatchlistRequest $request)
     {
-        
+        $watchlist = new watchlist();
+        $data = $request->input();
+
+        $watchlist->id = $this->idGenerator();
+        $watchlist->show_title = $data['showTitle'];
+        $watchlist->show_category = $data['showCategory'];
+
+        $watchlist->save();
+
+        return redirect('/');
     }
 
     private function idGenerator(){
