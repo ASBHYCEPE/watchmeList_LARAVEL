@@ -120,13 +120,13 @@ select{
     outline: none;
 }
 
-form{
+#main-form{
     padding: 5px;
     margin-top: 20px;
     display: flex;
 }
 
-form > div{
+#main-form > div{
     padding: 10px;
 }
 
