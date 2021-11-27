@@ -91,7 +91,7 @@
                             </form>
                         </div>
                         <div class="col-1">
-                            <form action="/update/{{$data->id}}/4" method="post">
+                            <form action="/update/{{$data->id}}/2" method="post">
                                 @csrf
                                 <input class="updateBtn" type="submit" value="FINISHED">
                             </form>
