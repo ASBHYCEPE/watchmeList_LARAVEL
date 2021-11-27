@@ -85,13 +85,13 @@
                             <h4>{{$data->show_title}}</h4>
                         </div>
                         <div class="col-1">
-                            <form action="/delete/{{$data->id}}" method="post">
+                            <form action="/update/{{$data->id}}/3" method="post">
                                 @csrf
                                 <input class="dropBtn" type="submit" value="DROP">
                             </form>
                         </div>
                         <div class="col-1">
-                            <form action="/update/{{$data->id}}/2" method="post">
+                            <form action="/update/{{$data->id}}/4" method="post">
                                 @csrf
                                 <input class="updateBtn" type="submit" value="FINISHED">
                             </form>
