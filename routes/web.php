@@ -18,4 +18,4 @@ use App\Http\Controllers\WatchlistController;
 Route::get('/', [navigationController::class, 'index']);
 Route::get('/history', [navigationController::class, 'history']);
 Route::post('/post',[WatchlistController::class, 'store']);
-Route::post('/delete/{id}',[WatchlistController::class, 'destroy']);
+Route::post('/delete',[WatchlistController::class, 'destroy']);
