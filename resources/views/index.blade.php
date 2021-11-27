@@ -30,12 +30,12 @@
         </div>
     </header>
     <div id="container">
-        <form action="/post" method="POST">
+        <form id="main-form" action="/post" method="POST">
             @csrf
             <div class="col-3">
                 <input type="text" placeholder="Enter the title of the show..." name="showTitle" required>
             </div>
-            
+
             <div class="col-1">
                 <select name="showCategory" >
                     <option value=0>PLANNING</option>
@@ -45,7 +45,7 @@
                 </select>
             </div>
             <div class="col-1">
-                <input type="submit" value="ADD SHOW">
+                <input class="submitBtn" type="submit" value="ADD SHOW">
             </div>
         </form>
 
@@ -60,10 +60,16 @@
                             <h4>{{$data->show_title}}</h4>
                         </div>
                         <div class="col-1">
-                            <a href="">DROP</a>
+                            <form action="/update/{{$data->id}}/3" method="post">
+                                @csrf
+                                <input class="dropBtn" type="submit" value="DROP">
+                            </form>
                         </div>
                         <div class="col-1">
-                            <a href="">WATCH</a>
+                            <form action="/update/{{$data->id}}/1" method="post">
+                                @csrf
+                                <input class="updateBtn" type="submit" value="WATCHING">
+                            </form>
                         </div>
                     </div>
                 @endforeach
@@ -79,10 +85,16 @@
                             <h4>{{$data->show_title}}</h4>
                         </div>
                         <div class="col-1">
-                            <a href="">DROP</a>
+                            <form action="/delete/{{$data->id}}" method="post">
+                                @csrf
+                                <input class="dropBtn" type="submit" value="DROP">
+                            </form>
                         </div>
                         <div class="col-1">
-                            <a href="">FINISHED</a>
+                            <form action="/update/{{$data->id}}/2" method="post">
+                                @csrf
+                                <input class="updateBtn" type="submit" value="FINISHED">
+                            </form>
                         </div>
                     </div>
                 @endforeach
