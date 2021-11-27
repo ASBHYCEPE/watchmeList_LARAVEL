@@ -35,6 +35,7 @@
             <div class="col-3">
                 <input type="text" placeholder="Enter the title of the show..." name="showTitle" required>
             </div>
+            
             <div class="col-1">
                 <select name="showCategory" >
                     <option value=0>PLANNING</option>
@@ -47,16 +48,44 @@
                 <input type="submit" value="ADD SHOW">
             </div>
         </form>
+
         <div id="category-container">
             <div class="category-block">
                 <div class="category-title">
                     <h2>PLANNED TO WATCH</h2>
                 </div>
+                @foreach ($planWatch as $key => $data)
+                    <div class="category-item">
+                        <div class="col-3">
+                            <h4>{{$data->show_title}}</h4>
+                        </div>
+                        <div class="col-1">
+                            <a href="">DROP</a>
+                        </div>
+                        <div class="col-1">
+                            <a href="">WATCH</a>
+                        </div>
+                    </div>
+                @endforeach
             </div>
+
             <div class="category-block">
                 <div class="category-title">
                     <h2>CURRENTLY WATCHING</h2>
                 </div>
+                @foreach ($watching as $key => $data)
+                    <div class="category-item">
+                        <div class="col-3">
+                            <h4>{{$data->show_title}}</h4>
+                        </div>
+                        <div class="col-1">
+                            <a href="">DROP</a>
+                        </div>
+                        <div class="col-1">
+                            <a href="">FINISHED</a>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
