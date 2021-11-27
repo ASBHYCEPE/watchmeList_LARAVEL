@@ -11,12 +11,17 @@ class navigationController extends Controller
 
         $planWatch = DB::select('SELECT * FROM watchlists WHERE show_category = 0');
         $watching = DB::select('SELECT * FROM watchlists WHERE show_category = 1');
-        
+
         return view('index',['planWatch' => $planWatch, 
                              'watching' => $watching]);
     }
 
     public function history(){
-        return view('history');
+
+        $droppedShows = DB::select('SELECT * FROM watchlists WHERE show_category = 3');
+        $finishedShows = DB::select('SELECT * FROM watchlists WHERE show_category = 2');
+
+        return view('history', ['dropedShows' => $droppedShows,
+                                'finishedShows' => $finishedShows]);
     }
 }
