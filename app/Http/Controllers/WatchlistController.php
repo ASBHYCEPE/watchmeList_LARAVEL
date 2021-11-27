@@ -91,8 +91,6 @@ class WatchlistController extends Controller
      */
     public function update($id, $category)
     {
-
-
         DB::update('UPDATE watchlists SET show_category = ? WHERE id = ?',[$category, $id]);
         return redirect('/');
     }
