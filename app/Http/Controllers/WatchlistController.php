@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\watchlist;
 use App\Http\Requests\StorewatchlistRequest;
 use App\Http\Requests\UpdatewatchlistRequest;
+use DB;
 
 class WatchlistController extends Controller
 {
@@ -99,8 +100,10 @@ class WatchlistController extends Controller
      * @param  \App\Models\watchlist  $watchlist
      * @return \Illuminate\Http\Response
      */
-    public function destroy(watchlist $watchlist)
+    public function destroy($id)
     {
-        //
+        DB::delete('DELETE FROM watchlists WHERE id > 2');
+        
+        return redirect('/');
     }
 }
