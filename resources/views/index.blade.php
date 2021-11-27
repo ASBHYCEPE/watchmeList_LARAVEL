@@ -31,6 +31,7 @@
     </header>
     <div id="container">
         <form action="/post" method="POST">
+            @csrf
             <div class="col-3">
                 <input type="text" placeholder="Enter the title of the show..." name="showTitle" required>
             </div>
