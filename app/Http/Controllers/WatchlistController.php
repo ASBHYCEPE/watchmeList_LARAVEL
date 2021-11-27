@@ -89,9 +89,12 @@ class WatchlistController extends Controller
      * @param  \App\Models\watchlist  $watchlist
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatewatchlistRequest $request, watchlist $watchlist)
+    public function update($id, $category)
     {
-        //
+
+
+        DB::update('UPDATE watchlists SET show_category = ? WHERE id = ?',[$category, $id]);
+        return redirect('/');
     }
 
     /**
