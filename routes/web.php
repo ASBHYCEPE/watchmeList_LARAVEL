@@ -19,3 +19,4 @@ Route::get('/', [navigationController::class, 'index']);
 Route::get('/history', [navigationController::class, 'history']);
 Route::post('/post',[WatchlistController::class, 'store']);
 Route::post('/delete',[WatchlistController::class, 'destroy']);
+Route::post('/update/{id}/{category}', [WatchlistController::class, 'update']);
